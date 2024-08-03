@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-
-const [city, setCity] = useState("");
-const [isCitySelected, setIsCitySelected] = useState(false);
+import ImageButton from "../global/ImageButton";
+import { useNavigate } from "react-router-dom";
+import searchIcon from "../../assets/images/search/search-icon.png";
 
 export default function SearchBar() {
+  const [city, setCity] = useState("");
+  const [isCitySelected, setIsCitySelected] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="search">
       <textarea
@@ -11,7 +15,15 @@ export default function SearchBar() {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      {!isCitySelected && <button></button>}
+      {!isCitySelected && (
+        <ImageButton
+          imageUrl={searchIcon}
+          onButtonClick={() => {
+            navigate("/display/" + { city });
+          }}
+          buttonClassName="search-button"
+        />
+      )}
     </div>
   );
 }
