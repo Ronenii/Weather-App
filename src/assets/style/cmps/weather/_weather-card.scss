@@ -1,0 +1,28 @@
+.weather-card {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 5px;
+  }
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
