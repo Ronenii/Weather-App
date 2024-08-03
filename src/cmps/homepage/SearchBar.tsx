@@ -15,15 +15,13 @@ export default function SearchBar() {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      {!isCitySelected && (
-        <ImageButton
-          imageUrl={searchIcon}
-          onButtonClick={() => {
-            navigate("/display/" + { city });
-          }}
-          buttonClassName="search-button"
-        />
-      )}
+      <ImageButton
+        imageUrl={searchIcon}
+        onButtonClick={() => {
+          navigate("/display/" + { city });
+        }}
+        buttonClassName="search-button"
+      />
     </div>
   );
 }

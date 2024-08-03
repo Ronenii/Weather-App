@@ -14,14 +14,12 @@ export default function ImageButton({
   buttonStyle = {},
 }: ImageButton) {
   return (
-    <div className={styles.container}>
-      <img src={imageUrl} className={styles.image} />
-      <br />
-      <button
-        onClick={onButtonClick}
-        className={`${styles.button} ${buttonClassName}`}
-        style={buttonStyle}
-      />
-    </div>
+    <button
+      className={`${styles.button} ${buttonClassName}`}
+      style={buttonStyle}
+      onClick={onButtonClick}
+    >
+      <img src={imageUrl} className={styles.image} alt="" />
+    </button>
   );
 }
