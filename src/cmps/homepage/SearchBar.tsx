@@ -10,7 +10,8 @@ export default function SearchBar() {
 
   return (
     <div className="search">
-      <textarea
+      <input
+        type="text"
         required
         value={city}
         onChange={(e) => setCity(e.target.value)}
