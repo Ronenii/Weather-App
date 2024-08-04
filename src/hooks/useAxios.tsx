@@ -1,6 +1,13 @@
 import axios, { AxiosRequestConfig } from "axios";
 import React, { useEffect, useState } from "react";
 
+// A custom hook to use axios from anywhere in the code.
+// use example:
+// const [loading, data, error, request] = useAxios<CurrentJsonResponse>(
+// { method: 'GET', url: 'BASE_URL/current.json?q='id:1104339'},
+// false
+// );
+
 export default function useAxios<T>(
   config: AxiosRequestConfig<any>,
   loadOnStart: boolean = true
