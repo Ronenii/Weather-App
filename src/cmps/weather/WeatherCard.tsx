@@ -6,16 +6,16 @@ export default function WeatherCard({
   condition,
   max_temp,
   min_temp,
-}: Partial<Weather>) {
+}: Weather) {
   return (
     <div className="weather-card">
       <img src={imageUrl} alt="weather icon" className="weather-icon" />
       <h2>{temperature} c</h2>
       <h3>{condition}</h3>
       <body>
-        max temp expected: {max_temp}
+        max: {max_temp}
         <br />
-        min temp expected: {min_temp}
+        min: {min_temp}
       </body>
     </div>
   );
