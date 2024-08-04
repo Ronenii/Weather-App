@@ -19,7 +19,7 @@ export default function SearchBar() {
       <ImageButton
         imageUrl={searchIcon}
         onButtonClick={() => {
-          navigate("/display/" + { city });
+          navigate("/display");
         }}
         buttonClassName="search-button"
       />
