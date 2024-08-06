@@ -12,11 +12,11 @@ export default function WeatherCard({
       <img src={imageUrl} alt="weather icon" className="weather-icon" />
       <h2>{temperature} c</h2>
       <h3>{condition}</h3>
-      <body>
+      <div>
         max: {max_temp}
         <br />
         min: {min_temp}
-      </body>
+      </div>
     </div>
   );
 }

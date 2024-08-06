@@ -1,5 +1,5 @@
 {
-  "forecast": [
+  "forecast": 
     {
       "last_update": "2024-08-04T00:00:00Z",
       "city": "Sample City",
@@ -56,5 +56,4 @@
         }
       ]
     }
-  ]
 }
